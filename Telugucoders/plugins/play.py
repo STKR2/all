@@ -69,7 +69,7 @@ useer = "NaN"
     & ~filters.forwarded
     & ~filters.via_bot
 )
-async def play(c: Client, m: Message,):
+async def play(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -118,7 +118,7 @@ async def play(c: Client, m: Message,):
             return await m.reply_text(_["music_7"].format(e))
     if replied:
         if replied.audio or replied.voice:
-            Telugu = await replied.reply(["music_8"])
+            Telugu = await replied.reply(_["music_8"])
             dl = await replied.download()
             link = replied.link
             
@@ -143,7 +143,7 @@ async def play(c: Client, m: Message,):
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
-            raise DurationLimitError(["music_9"].format(DURATION_LIMIT))
+            raise DurationLimitError(_["music_9"].format(DURATION_LIMIT))
    
             if chat_id in QUEUE:
                 title = songname
@@ -176,7 +176,7 @@ async def play(c: Client, m: Message,):
                     views = "Locally added"
                     thumbnail = f"{IMG_5}"
                     image = await generate_cover(requested_by, title, views, duration, thumbnail)
-                    await Telugu.edit(["music_11"])
+                    await Telugu.edit(_["music_11"])
                     await call_py.join_group_call(
                         chat_id,
                         AudioPiped(
@@ -210,7 +210,7 @@ async def play(c: Client, m: Message,):
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
-                    await Telugu.edit(["music_14"])
+                    await Telugu.edit(_["music_14"])
                 else:
                     results = YoutubeSearch(url, max_results=1).to_dict()
                     # print results
