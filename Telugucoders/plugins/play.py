@@ -60,10 +60,12 @@ async def ytdl(link):
 #plus
 useer = "NaN"
 
-@Client.on_message(command(["شغل", f"تشغيل"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["شغل", f"شغلي", "تشغيل"]) & other_filters)
 @language
 async def play(c: Client, m: Message, _):
     await m.delete()
+    replied = m.reply_to_message
+    chat_id = m.chat.id
     user_id = m.from_user.id
     if m.sender_chat:
         return await m.reply_text(_["music_1"])
