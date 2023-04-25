@@ -331,7 +331,7 @@ async def play(c: Client, m: Message, _):
                             await m.reply_text(f" ᴇʀʀᴏʀ: `{ep}`")
 
                         try:
-                            os.remove("final.png")
+                            os.remove("https://te.legra.ph/file/5fdd8da2461c05d893189.jpg")
                         except Exception:
                             pass
                         return
