@@ -69,7 +69,7 @@ useer = "NaN"
     & ~filters.forwarded
     & ~filters.via_bot
 )
-async def play(c: Client, m: Message, _):
+async def play(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -306,7 +306,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                         await m.reply_photo(
-                            photo="final.png",
+                            photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                             reply_markup=buttons,
                             caption=_["music_10"].format(pos))
                     else:
