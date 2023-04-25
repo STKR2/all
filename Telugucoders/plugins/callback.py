@@ -33,10 +33,8 @@ async def home_start(client, CallbackQuery, _):
            InlineKeyboardButton(_["help_btn"], callback_data="command_list"), 
            ],[
            InlineKeyboardButton(_["support_btn"], url=f"https://t.me/{GROUP}"), 
-           InlineKeyboardButton(_["network_btn"], url=f"https://t.me/{NETWORK}"), 
            ],[
-           InlineKeyboardButton(_["git_repo"], url="https://github.com/TeluguCodersMusic/Amalav2.0"), 
-           InlineKeyboardButton(_["owner_btn"], url=f"t.me/santhu_afk_bot7981"), 
+           InlineKeyboardButton(_["owner_btn"], url=f"t.me/RR8R9"), 
            ],[
            InlineKeyboardButton(_["lang_btn"], callback_data="_langs")
            ]]
@@ -53,7 +51,6 @@ async def commands_set(client, CallbackQuery, _):
           InlineKeyboardButton(_["user_cmds"], callback_data="user_commands"), 
           ],[
           InlineKeyboardButton(_["support_btn"], url=f"https://t.me/{GROUP}"), 
-          InlineKeyboardButton(_["network_btn"], url=f"https://t.me/{NETWORK}"),  
           ],[
           InlineKeyboardButton(_["back_home"], callback_data="home_start"),
           InlineKeyboardButton(_["close_btn"], callback_data="close_panel") 
