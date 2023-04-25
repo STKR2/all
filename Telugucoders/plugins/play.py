@@ -60,12 +60,7 @@ async def ytdl(link):
 #plus
 useer = "NaN"
 
-@Client.on_message(
-    filters.command(["شغل", f"."])
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
+@Client.on_message(command(["/play", "/p", "/ش", "play", "تشغيل", "شغل", "@", "#""]) & filters.group & ~filters.edited)
 @language
 async def play(c: Client, m: Message, _):
     await m.delete()
