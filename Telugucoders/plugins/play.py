@@ -69,7 +69,7 @@ useer = "NaN"
     & ~filters.forwarded
     & ~filters.via_bot
 )
-async def play(c: message, m: Message, _):
+async def play(c: Client, m: Message,):
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
