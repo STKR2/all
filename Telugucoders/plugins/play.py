@@ -67,9 +67,9 @@ useer = "NaN"
 )
 async def play(_, message: Message):
     await m.delete()
-    replied = m.reply_to_message
-    chat_id = m.chat.id
-    user_id = m.from_user.id
+    replied = reply_to_message
+    chat_id = chat.id
+    user_id = from_user.id
     if m.sender_chat:
         return await m.reply_text(_["music_1"])
     try:
