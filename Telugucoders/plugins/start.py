@@ -52,10 +52,8 @@ async def start_(client: Client, message: Message, _):
     start_keyboard = InlineKeyboardMarkup( [[
            InlineKeyboardButton(_["help_btn"], callback_data="command_list"), 
            ],[
-           InlineKeyboardButton(_["support_btn"], url=f"https://t.me/{GROUP}"), 
-           InlineKeyboardButton(_["network_btn"], url=f"https://t.me/{NETWORK}"), 
+           InlineKeyboardButton(_["support_btn"], url=f"https://t.me/{GROUP}"),  
            ],[
-           InlineKeyboardButton(_["git_repo"], url="https://github.com/Telugucoders/AmalaMusic"), 
            InlineKeyboardButton(_["owner_btn"], url=f"tg://settings"), 
            ],[
            InlineKeyboardButton(_["lang_btn"], callback_data="_langs")
@@ -97,7 +95,6 @@ async def help(client: Client, message: Message, _):
           InlineKeyboardButton(_["user_cmds"], callback_data="user_commands"), 
           ],[
           InlineKeyboardButton(_["support_btn"], url=f"https://t.me/{GROUP}"), 
-          InlineKeyboardButton(_["network_btn"], url=f"https://t.me/{NETWORK}"),  
           ],[
           InlineKeyboardButton(_["back_home"], callback_data="home_start"),
           InlineKeyboardButton(_["close_btn"], callback_data="close_panel") 
