@@ -34,9 +34,7 @@ async def home_start(client, CallbackQuery, _):
            ],[
            InlineKeyboardButton(_["support_btn"], url=f"https://t.me/{GROUP}"), 
            ],[
-           InlineKeyboardButton(_["owner_btn"], url=f"tg://settings"), 
-           ],[
-           InlineKeyboardButton(_["lang_btn"], callback_data="_langs")
+           InlineKeyboardButton(_["owner_btn"], url=f"tg://settings")
            ]]
            )  
     await CallbackQuery.edit_message_text(_["start1"].format(user_mention),reply_markup=start_keyboard)       
