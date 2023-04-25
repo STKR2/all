@@ -61,7 +61,7 @@ async def ytdl(link):
 useer = "NaN"
 
 @Client.on_message(
-    commandpro(["/play", "/p", "/ش", "play", "تشغيل", "شغل", "@", "#"])
+    command(["/play", "/p", "/ش", "play", "تشغيل", "شغل", "@", "#"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
