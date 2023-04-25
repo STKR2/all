@@ -151,7 +151,6 @@ async def play(c: Client, m: Message, _):
             [
                 [
                         InlineKeyboardButton(_["vid_btn"], callback_data="menu"), 
-                        InlineKeyboardButton(_["close_btn"], callback_data="set_close")
                 ]
             ]
         )
@@ -185,7 +184,6 @@ async def play(c: Client, m: Message, _):
             [
                 [
                         InlineKeyboardButton(_["vid_btn"], callback_data="menu"), 
-                        InlineKeyboardButton(_["close_btn"], callback_data="set_close")
                 ]
             ] 
         )
@@ -196,7 +194,7 @@ async def play(c: Client, m: Message, _):
                     )
                 except Exception as e:
                     await Telugu.delete()
-                    await m.reply_text(f"🚫 ᴇʀʀᴏʀ:\n\n» {e}")
+                    await m.reply_text(f" ᴇʀʀᴏʀ:\n\n» {e}")
         else:
             if len(m.command) < 2:
                 await m.reply(_["music_13"]) 
@@ -231,7 +229,6 @@ async def play(c: Client, m: Message, _):
             [
                 [
                         InlineKeyboardButton(_["vid_btn"], callback_data="menu"), 
-                        InlineKeyboardButton(_["close_btn"], callback_data="set_close")
                 ]
             ]
         )
@@ -256,7 +253,6 @@ async def play(c: Client, m: Message, _):
             [
                 [
                         InlineKeyboardButton(_["vid_btn"], callback_data="menu"), 
-                        InlineKeyboardButton(_["close_btn"], callback_data="set_close")
                 ]
             ]
         )
@@ -266,7 +262,7 @@ async def play(c: Client, m: Message, _):
                                     caption=_["music_12"].format(requested_by))
                             except Exception as ep:
                                 await Telugu.delete()
-                                await m.reply_text(f"🚫 ᴇʀʀᴏʀ: `{ep}`")
+                                await m.reply_text(f" ᴇʀʀᴏʀ: `{ep}`")
 
     else:
         if len(m.command) < 2:
@@ -299,7 +295,6 @@ async def play(c: Client, m: Message, _):
             [
                 [
                         InlineKeyboardButton(_["vid_btn"], callback_data="menu"), 
-                        InlineKeyboardButton(_["close_btn"], callback_data="set_close")
                 ]
             ]
         )
@@ -324,7 +319,6 @@ async def play(c: Client, m: Message, _):
             [
                 [
                         InlineKeyboardButton(_["vid_btn"], callback_data="menu"), 
-                        InlineKeyboardButton(_["close_btn"], callback_data="set_close")
                 ]
             ]
         )
@@ -334,7 +328,7 @@ async def play(c: Client, m: Message, _):
                                 caption=_["music_12"].format(m.chat.title, m.chat.id, requested_by))
                         except Exception as ep:
                             await Telugu.delete()
-                            await m.reply_text(f"🚫 ᴇʀʀᴏʀ: `{ep}`")
+                            await m.reply_text(f" ᴇʀʀᴏʀ: `{ep}`")
 
                         try:
                             os.remove("final.png")
