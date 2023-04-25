@@ -68,7 +68,7 @@ useer = "NaN"
     & ~filters.edited
     & ~filters.forwarded
     & ~filters.via_bot
-@language)
+)
 async def play(c: Client, m: Message, _):
     await m.delete()
     replied = m.reply_to_message
