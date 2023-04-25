@@ -65,11 +65,11 @@ useer = "NaN"
     & ~filters.forwarded
     & ~filters.via_bot
 )
-async def play(_, message: Message):
+async def play(_, Client, m: Message, _):
     await m.delete()
-    replied = reply_to_message
-    chat_id = chat.id
-    user_id = from_user.id
+    replied = m.reply_to_message
+    chat_id = m.chat.id
+    user_id = m.from_user.id
     if m.sender_chat:
         return await m.reply_text(_["music_1"])
     try:
