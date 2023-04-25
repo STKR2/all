@@ -1,24 +1,24 @@
 name : English
 
 #plugins - alive.py
-start1 : "**- أهݪاެ حِبيبي 🫶🏻 . {}\n\nاެنِي بۅت حِݪۅ ۅبسيطَ ۅحݪۅ مثݪكَ يكدࢪ يَشغِݪ اެݪاެغاެني بَكَݪ ۅقتَ 🤎 .
+start1 : "**- أهݪاެ يࢪۅحي 🫶🏻 . {}\n\nأڼي بۅت بسيط ۅحݪۅ مثݪك يڪدࢪ يشغݪ أغأڼي بڪݪ ۅقت 🤎 .
 **"
 help_btn : "اۅامࢪ بۅت ."
 support_btn : "قڼأة بۅت ."
 owner_btn : "مطۅࢪ بۅت ."
 lang_btn : "ݪغة بۅت ."
-alive_start : "Hello {}\n\nIam Alive 😅 How can i help you\nMyVersion: 3.0 Running on vps server."
+alive_start : "شغال وما اوكف ، عني يابه عني ."
 close_btn : "- اެمِسِحِ"
-repo_btn : "Hey This is the source of me 🙂"
-source : "Check Now ✅"
+repo_btn : "هذا سورسي معود"
+source : "تم تأكد هسة ✅"
 help_button : "- لك بعض الاوامر التي ادعمها 🤎."
 owner_cmds : "- أۅامࢪ اݪمطۅࢪ الاسأسي"
 sudo_user : "- اۅامࢪ اݪمطۅࢪين"
 user_cmds : "- اۅامࢪ اݪمشࢪفين"
 back_home : "• ࢪجۅع"
-ghelp_text : "Hello Contact Me in Pm for help!" 
-ghelp_btn : "🔗 Click here to help"
-uptime_btn : "**💞 Telugu Coders Music Bot Uptime:\n➠ Uptime: {}\n➠ User: {}\n➠ Started Time: {}\n➠ Powered By: @tgshadow_fighters**"
+ghelp_text : "دوس ع الرابط الجوه حياتي!" 
+ghelp_btn : "- لك مو تدلل "
+uptime_btn : "** Telugu Coders Music Bot Uptime:\n➠ Uptime: {}\n➠ User: {}\n➠ Started Time: {}\n➠ Powered By: @RR8R9**"
 
 #plugins - admins.py
 reload_btn : "**✅- تم تحديث البوت\n✅- تم تحديث قاعدة البيانات\n╰- اكتمل التحديث بواسطة : {}**"
@@ -79,7 +79,7 @@ music_6 : "**💡 To use me, Give me the following permission below:\n\n» ❌ B
 music_7 : "**💡**Userbot Failed👎 to join**\n\n**Reason**: {}**"
 music_8 : "**يتم أݪتشغيݪ أݪأڼ 🤎.**"
 music_9 : "**💡 Videos longer than {} minutes aren't allowed to play!**"
-music_10 : "**💡 Queue added to playlist\n\nQueue: #{}**"
+music_10 : "**- تم الإضافة الى الانتضار\n\nقائمة الانتضار: #{}**"
 music_11 : "**يتم أݪتشغيݪ أݪأڼ 🤎.**"
 music_12 : "**- ݪڪ مۅٛ تدݪݪ تم تشغيݪ أݪأغڼية 🤎.3>**\n\n- اެسم كَࢪۅبي : `{}`\n- أݪأيدي : `{}`\n- طݪبٰ مڼ أݪأخ : `{}`"
 music_13 : "**- أڼطيڼي أسم أݪأغڼية بيب ؟**"
