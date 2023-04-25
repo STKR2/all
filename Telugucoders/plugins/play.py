@@ -144,7 +144,7 @@ async def play(c: Client, m: Message, _):
                 requested_by = m.from_user.first_name
                 duration = round(audio.duration / 60)
                 views = "Locally added"
-                thumbnail = f"{IMG_5}"
+                thumbnail = f"https://te.legra.ph/file/5fdd8da2461c05d893189.jpg"
                 image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 buttons = InlineKeyboardMarkup(
@@ -157,7 +157,7 @@ async def play(c: Client, m: Message, _):
         )
                 await Telugu.delete()
                 await m.reply_photo(
-                    photo="final.png",
+                    photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                     reply_markup=buttons,
                     caption=_["music_10"].format(pos),
                 )
@@ -190,7 +190,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                     await m.reply_photo(
-                        photo="final.png",
+                        photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                         reply_markup=buttons,
                         caption=_["music_12"],
                     )
@@ -236,7 +236,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                             await m.reply_photo(
-                                photo="final.png",
+                                photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                                 reply_markup=buttons,
                                 caption=_["music_16"].format(pos))
                         else:
@@ -261,7 +261,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                                 await m.reply_photo(
-                                    photo="final.png",
+                                    photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                                     reply_markup=buttons,
                                     caption=_["music_12"].format(requested_by))
                             except Exception as ep:
@@ -329,7 +329,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                             await m.reply_photo(
-                                photo="final.png",
+                                photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                                 reply_markup=buttons,
                                 caption=_["music_12"].format(m.chat.title, m.chat.id, requested_by))
                         except Exception as ep:
