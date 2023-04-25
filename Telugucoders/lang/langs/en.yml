@@ -8,7 +8,7 @@ support_btn : "قڼأة بۅت ."
 owner_btn : "مطۅࢪ بۅت ."
 lang_btn : "ݪغة بۅت ."
 alive_start : "Hello {}\n\nIam Alive 😅 How can i help you\nMyVersion: 3.0 Running on vps server."
-close_btn : "Close 🗑"
+close_btn : "- اެمِسِحِ"
 repo_btn : "Hey This is the source of me 🙂"
 source : "Check Now ✅"
 help_button : "- لك بعض الاوامر التي ادعمها 🤎."
@@ -31,7 +31,7 @@ stop_btn : "- تأج ࢪأسي مۅٛݪأي أݪعࢪ࣪يࢪ࣪ تم ط
 ntg_stream_btn : "يݪه غطۅ غطۅ تࢪأ مأڪۅ شي مشتغݪ معۅد 🤣.؟"
 pause_btn : "Successfully ▶️ Paused your song.\n╰ Song Paused By: {}"
 resume_btn : "Successfully ⏸ Resumed your song.\n╰ Song Resumed By: {}"
-vid_btn : "🛠️ Menu"
+vid_btn : "- تحڪم أۅنݪأيڼ ."
 
 #plugins - callback.py
 sudo_cmds : "📚 Command list for Sudo Users.\n» /stats - Get the current <b>stats</> of Bot\n» /calls - This is command shows <b>GROUP</> Active calls\n» /speedtest - Check Bot Speedtest Server.\n» /sysinfo - Shows the System information of Bot.\n__Powered By {} AI__"
