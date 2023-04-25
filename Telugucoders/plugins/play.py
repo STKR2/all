@@ -64,8 +64,6 @@ useer = "NaN"
 @language
 async def play(c: Client, m: Message, _):
     await m.delete()
-    replied = m.reply_to_message
-    chat_id = m.chat.id
     user_id = m.from_user.id
     if m.sender_chat:
         return await m.reply_text(_["music_1"])
@@ -187,7 +185,7 @@ async def play(c: Client, m: Message, _):
                         InlineKeyboardButton(_["vid_btn"], callback_data="menu"), 
                         InlineKeyboardButton(_["close_btn"], callback_data="set_close")
                 ]
-            ]
+            ] 
         )
                     await m.reply_photo(
                         photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
@@ -201,7 +199,7 @@ async def play(c: Client, m: Message, _):
             if len(m.command) < 2:
                 await m.reply(_["music_13"]) 
             else:
-                Telugu = await c.send_message(chat_id, "🔍")
+                Telugu = await c.send_message(chat_id, "يتم أݪبٰحث 🤎.")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
@@ -272,7 +270,7 @@ async def play(c: Client, m: Message, _):
         if len(m.command) < 2:
             await m.reply(_["music_13"])
         else:
-            Telugu = await c.send_message(chat_id, "🔍")
+            Telugu = await c.send_message(chat_id, "يتم أݪبٰحث 🤎.")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
