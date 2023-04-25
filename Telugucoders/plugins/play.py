@@ -63,7 +63,7 @@ async def ytdl(link):
 useer = "NaN"
 
 @Client.on_message(
-    commandpro(["/play", "/p", "/ش", "play", "تشغيل", "شغل"])
+    commandpro(["play", "/p", "play", "تشغيل", "شغل"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
@@ -204,7 +204,7 @@ async def play(c: Client, m: Message,):
                     await m.reply_text(f" ᴇʀʀᴏʀ:\n\n» {e}")
         else:
             if len(m.command) < 2:
-                await m.reply(["music_13"]) 
+                await m.reply(_["music_13"]) 
             else:
                 Telugu = await c.send_message(chat_id, "يتم أݪبٰحث 🤎.")
                 query = m.text.split(None, 1)[1]
