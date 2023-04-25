@@ -252,10 +252,6 @@ async def menu(client, CallbackQuery, _):
           InlineKeyboardButton(_["resume"], callback_data="resume"), 
           InlineKeyboardButton(_["pause"], callback_data="pause"), 
           InlineKeyboardButton(_["end"], callback_data="end"), 
-          ],[         
-          InlineKeyboardButton(_["Global_calls"], callback_data="global_calls"), 
-          ],[
-          InlineKeyboardButton(_["close_btn"], callback_data="close_panel")
           ]]
           )  
     await CallbackQuery.edit_message_text(_["menu_button"],reply_markup=menu_keyboard) 
