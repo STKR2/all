@@ -82,16 +82,16 @@ async def play(c: Client, m: Message,):
         return await m.reply_text(f"error:\n\n{e}")
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
-        await m.reply_text(["music_2"])
+        await m.reply_text(_["music_2"])
         return
     if not a.can_manage_voice_chats:
-        await m.reply_text(["music_3"])
+        await m.reply_text(_["music_3"])
         return
     if not a.can_delete_messages:
-        await m.reply_text(["music_4"])
+        await m.reply_text(_["music_4"])
         return
     if not a.can_invite_users:
-        await m.reply_text(["music_5"])
+        await m.reply_text(_["music_5"])
         return
     try:
         ubot = (await user.get_me()).id
@@ -115,7 +115,7 @@ async def play(c: Client, m: Message,):
         except UserAlreadyParticipant:
             pass
         except Exception as e:
-            return await m.reply_text(["music_7"].format(e))
+            return await m.reply_text(_["music_7"].format(e))
     if replied:
         if replied.audio or replied.voice:
             Telugu = await replied.reply(["music_8"])
