@@ -2,12 +2,10 @@ name : English
 
 #plugins - alive.py
 start1 : "**👋🏻Hello {}\n\nIam an Advance Music bot with special features.\nIam running on vps server Iam play high quality music with multi language support\n\n🆚Version:3.0**"
-help_btn : "👨‍💼 Help & Commands 👨‍💼"
-support_btn : "👥 Support"
-network_btn : "📡 Network"
-git_repo : "💡 Git Repo"
-owner_btn : "🇮🇳 Owner"
-lang_btn : "🇬🇧 Languages"
+help_btn : "مطۅࢪ بۅت ."
+support_btn : "قڼأة بۅت ."
+owner_btn : "مطۅࢪ بۅت ."
+lang_btn : "ݪغة بۅت ."
 alive_start : "Hello {}\n\nIam Alive 😅 How can i help you\nMyVersion: 3.0 Running on vps server."
 close_btn : "Close 🗑"
 repo_btn : "Hey This is the source of me 🙂"
