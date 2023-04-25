@@ -1,0 +1,62 @@
+{
+    "name": "Telugu coders",
+    "logo": "https://te.legra.ph/file/48b15ea2011dc80cdcaab.jpg",
+    "description": "An Advanced Premium Music Bot For Telegram Groups VC.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/Telugucoders/AmalaMusic",
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "Your App ID",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your App Hash",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Put Bot Token Of Your Bot",
+            "required": true
+        },
+        "STRING_SESSION": {
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "PUT YOUR BOT USERNAME WITHOUT @",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "PUT YOUR SUDO USERS ID",
+            "required": true
+        },
+        "GROUP": {
+            "description": "put your group name without@ EX: tgshadow_fighters",
+            "required": true
+        },
+        "NETWORK": {
+            "description": "put your channel username without@ EX: telugucoders",
+            "required": true
+        },
+        "MONGODB_URL": {
+            "description": "Get a mongodb url from https://cloud.mongodb.com.",
+            "required": true
+        },
+        "BOT_NAME": {
+            "description": "put your bot name here Ex: Amala music bot",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "put your ID here get from @Missrosebot Ex: 555653637",
+            "required": true 
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
