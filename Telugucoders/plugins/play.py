@@ -64,7 +64,7 @@ useer = "NaN"
 
 @Client.on_message(
     commandpro(["play", "/p", "play", "تشغيل", "شغل"])
-    & filters.group
+    & ~filters.group
     & ~filters.edited
     & ~filters.forwarded
     & ~filters.via_bot
