@@ -60,10 +60,12 @@ async def ytdl(link):
 #plus
 useer = "NaN"
 
-@Client.on_message(command(["شغلي", f"شغل", "تشغيل"]) & other_filters)
-@authorized_users_only
-@language
-async def play(c: Client, m: Message, _):
+@Client.on_message(command(["شغلي", f"شغل", "تشغيل"]) & filters.group
+    & ~filters.edited
+    & ~filters.forwarded
+    & ~filters.via_bot
+)
+async def play(_, message: Message):
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
