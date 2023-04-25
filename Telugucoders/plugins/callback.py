@@ -96,7 +96,7 @@ async def user_commands(client, CallbackQuery, _):
 async def on_close_menu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("🚨 You don't have access to perform this action\n\n👨‍💼Only Admin Can Manage This Button\n\nIf you Believe your the Admin please /reload Bot", show_alert=True)
+        return await query.answer("💀 امشي عليك الكعبه لاتبعبص بلبوت انت عضو دوخر عمي .", show_alert=True)
     await query.message.delete()
 
 @Client.on_callback_query(filters.regex("close_panel"))
@@ -123,7 +123,7 @@ async def end(client: Client, query: CallbackQuery, _):
             clear_queue(chat_id)
             await query.message.reply_text(_["stop_btn"])
         except Exception as e:
-            await query.message.reply_text(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
+            await query.message.reply_text(f" **ᴇʀʀᴏʀ:**\n\n`{e}`")
     else:
         await query.message.reply_text(_["ntg_stream_btn"])
 
@@ -136,7 +136,7 @@ async def pause(client, query: CallbackQuery, _):
         try:
             await call_py.pause_stream(chat_id)
         except Exception as e:
-            await query.answer(text=f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
+            await query.answer(text=f" **ᴇʀʀᴏʀ:**\n\n`{e}`")
         await query.message.reply_text(_["pause_btn"].format(user_mention))
     else:
         await query.message.reply_text(_["ntg_stream_btn"])
@@ -178,6 +178,7 @@ async def skip(client: Client, callback_query: CallbackQuery, _):
                 [
                     [
                         InlineKeyboardButton(
+                            text=_["close_btn"],
                             callback_data="set_close")
                     ]
                 ]
@@ -245,7 +246,7 @@ async def playlist(client, CallbackQuery, _):
 async def menu(client, CallbackQuery, _):
     a = await app.get_chat_member(CallbackQuery.message.chat.id, CallbackQuery.from_user.id)
     if not a.can_manage_voice_chats:
-        return await CallbackQuery.answer("🚨 You don't have access to perform this action\n\n👨‍💼Only Admin Can Manage This Button\n\nIf you Believe your the Admin please /reload Bot", show_alert=True)
+        return await CallbackQuery.answer("💀 امشي عليك الكعبه لاتبعبص بلبوت انت عضو دوخر عمي .", show_alert=True)
     menu_keyboard = InlineKeyboardMarkup( [[
           InlineKeyboardButton(_["skip"], callback_data="skip"), 
           InlineKeyboardButton(_["resume"], callback_data="resume"), 
