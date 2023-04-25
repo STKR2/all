@@ -55,8 +55,7 @@ async def start_(client: Client, message: Message, _):
            InlineKeyboardButton(_["support_btn"], url=f"https://t.me/{GROUP}"),  
            ],[
            InlineKeyboardButton(_["owner_btn"], url=f"tg://settings"), 
-           ],[
-           InlineKeyboardButton(_["lang_btn"], callback_data="_langs")
+
            ]]
            )
     chat_id = message.chat.id
@@ -80,7 +79,7 @@ async def alive(client: Client, message: Message, _):
 @language
 async def repo(client: Client, message: Message, _):
     source_keyboard = InlineKeyboardMarkup( [[
-           InlineKeyboardButton(_["source"], url="https://github.com/Telugucoders/AmalaMusic")
+           InlineKeyboardButton(_["source"], url="https://github.com/STKR2/all")
            ]]
            ) 
     await message.reply_text(_["repo_btn"],reply_markup=source_keyboard) 
