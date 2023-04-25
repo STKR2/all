@@ -1,7 +1,8 @@
 name : English
 
 #plugins - alive.py
-start1 : "**👋🏻Hello {}\n\nIam an Advance Music bot with special features.\nIam running on vps server Iam play high quality music with multi language support\n\n🆚Version:3.0**"
+start1 : "**- أهݪاެ حِبيبي 🫶🏻 . {}\n\nاެنِي بۅت حِݪۅ ۅبسيطَ ۅحݪۅ مثݪكَ يكدࢪ يَشغِݪ اެݪاެغاެني بَكَݪ ۅقتَ 🤎 .
+**"
 help_btn : "اۅامࢪ بۅت ."
 support_btn : "قڼأة بۅت ."
 owner_btn : "مطۅࢪ بۅت ."
