@@ -3,7 +3,7 @@
 import asyncio
 from time import time
 from datetime import datetime
-from Telugucoders.helpers.filters import command
+from Telugucoders.helpers.filters import command, other_filters
 from Telugucoders.helpers.command import commandpro as command
 from pyrogram import Client, filters, __version__ as pyrover
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
