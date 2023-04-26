@@ -99,7 +99,7 @@ async def help(client: Client, message: Message, _):
     await message.reply_text(_["help_button"],reply_markup=help_keyboard) 
 
 
-@Client.on_message(command("مساعدة") & ~other_filters & ~filters.group & ~filters.edited) 
+@Client.on_message(command("الاوامر") & ~other_filters & ~filters.group & ~filters.edited & ~BANNED_USERS) 
 @language
 async def ghelp(client: Client, message: Message, _):
     ghelp_keyboard = InlineKeyboardMarkup( [[
@@ -108,7 +108,7 @@ async def ghelp(client: Client, message: Message, _):
            ) 
     await message.reply_text(_["ghelp_text"],reply_markup=ghelp_keyboard) 
         
-@Client.on_message(command("uptime") & filters.group & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(command("المطور") & filters.group & ~filters.edited & ~BANNED_USERS)
 @language
 async def get_uptime(c: Client, message: Message, _):
     current_time = datetime.utcnow()
