@@ -79,7 +79,7 @@ async def alive(client: Client, message: Message, _):
 @language
 async def repo(client: Client, message: Message, _):
     source_keyboard = InlineKeyboardMarkup( [[
-           InlineKeyboardButton(_["سورس فريدوم ."], url="https://github.com/STKR2/all")
+           InlineKeyboardButton(_["Source"], url="https://github.com/STKR2/all")
            ]]
            ) 
     await message.reply_text(_["repo_btn"],reply_markup=source_keyboard) 
@@ -127,4 +127,4 @@ async def ping_pong(c: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("**جاري حساب البنك ..**")
     delta_ping = time() - start
-    await m_reply.edit_text(" **بنك البوت!-**\n" f" **{delta_ping * 1000:.3f} مللي ثانية**")
+    await m_reply.edit_text(" **- بنك البوت!**\n" f" **{delta_ping * 1000:.3f} مللي ثانية**")
