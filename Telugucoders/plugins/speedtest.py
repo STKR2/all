@@ -24,7 +24,7 @@ def testspeed(m):
     return result
 
 
-@app.on_message(command(["السرعة", f"سبيد"]) & ~other_filters & ~filters.edited)
+@Client.on_message(command(["السرعة", f"سبيد"]) & ~other_filters & ~filters.edited)
 async def speedtest_function(client, message):
     m = await message.reply_text("- تجربة الملفات")
     loop = asyncio.get_event_loop()
