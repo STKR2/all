@@ -18,8 +18,6 @@ from youtube_search import YoutubeSearch
 from Telugucoders.helpers.lang import language
 from Telugucoders.helpers.lang import *
 from Telugucoders.plugins.language import keyboard
-from Telugucoders.helpers.filters import command, other_filters
-from Telugucoders.helpers.command import commandpro
 from Telugucoders.lang import get_command
 from Telugucoders.helpers.lang import languageCB
 
@@ -62,12 +60,9 @@ async def ytdl(link):
 #plus
 useer = "NaN"
 
-@Client.on_message(commandpro(["شغل", f"شغلي"]) & filters.group 
-& ~filters.edited 
-& ~other_filters
-& ~filters.forwarded)
-
-async def play(c: Client, m: Message, _):
+@Client.on_message(command(["شغل", f"play@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@language
+async def play(c: Client, m: Message, _)
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
