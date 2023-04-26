@@ -1,9 +1,9 @@
 from typing import List
 from pyrogram.types import Chat, User
 import Telugucoders.core.cache.admins
+import get as gett
 
-
-async def get_administrators(chat: Chat) -> List[User]:
+async def get_administrators(chat: Chat) -> List[int]:
     get = get(chat.id)
 
     if get:
