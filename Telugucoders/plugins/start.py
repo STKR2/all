@@ -45,7 +45,7 @@ async def _human_time_duration(seconds):
     
    ## don't change any value in this repo if you change the value bot will crash your heroku accounts. 
 
-@Client.on_message(command("start") & ~other_filters & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(command("start") & ~filters.edited & ~BANNED_USERS)
 @language
 async def start_(client: Client, message: Message, _):
     user_mention = message.from_user.mention
@@ -63,9 +63,9 @@ async def start_(client: Client, message: Message, _):
         mention = message.from_user.mention 
         await message.reply_text(_["start1"].format(user_mention),reply_markup=start_keyboard) 
     else:
-        await message.reply_text("Please contact in my pm for more help :)")
+        await message.reply_text("- موجود موجود لتخاف")
          
-@Client.on_message(command("النشاط") & other_filters & filters.group & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(command("النشاط") & filters.group & ~filters.edited & ~BANNED_USERS)
 @language
 async def alive(client: Client, message: Message, _):    
     user_mention = message.from_user.mention
@@ -75,7 +75,7 @@ async def alive(client: Client, message: Message, _):
            ) 
     await message.reply_text(_["alive_start"].format(user_mention),reply_markup=alive_keyboard)
 
-@Client.on_message(command(["السورس", "سورس"]) & ~other_filters & ~filters.group & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(command(["السورس", "سورس"]) & ~filters.group & ~filters.edited & ~BANNED_USERS)
 @language
 async def repo(client: Client, message: Message, _):
     source_keyboard = InlineKeyboardMarkup( [[
@@ -84,7 +84,7 @@ async def repo(client: Client, message: Message, _):
            ) 
     await message.reply_text(_["repo_btn"],reply_markup=source_keyboard) 
 
-@Client.on_message(command("مساعدة") & filters.private & ~other_filters & ~filters.edited & ~BANNED_USERS) 
+@Client.on_message(command("مساعده") & filters.private & ~other_filters & ~filters.edited & ~BANNED_USERS) 
 @language
 async def help(client: Client, message: Message, _):
     help_keyboard = InlineKeyboardMarkup( [[
@@ -99,7 +99,7 @@ async def help(client: Client, message: Message, _):
     await message.reply_text(_["help_button"],reply_markup=help_keyboard) 
 
 
-@Client.on_message(command("مساعدة") & ~other_filters & ~filters.group & ~filters.edited) 
+@Client.on_message(command("مساعدة") & ~filters.group & ~filters.edited) 
 @language
 async def ghelp(client: Client, message: Message, _):
     ghelp_keyboard = InlineKeyboardMarkup( [[
@@ -122,7 +122,7 @@ async def get_uptime(c: Client, message: Message, _):
     await message.reply_text(_["uptime_btn"].format(uptime,user_mention,START_TIME_ISO),reply_markup=uptime_keyboard) 
 
                  
-@Client.on_message(command("بنك") & other_filters & filters.group & ~filters.edited)
+@Client.on_message(command("بنك") & filters.group & ~filters.edited)
 async def ping_pong(c: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("**جاري حساب البنك ..**")
