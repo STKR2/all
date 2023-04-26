@@ -5,9 +5,9 @@ from Telugucoders.core.clientbot import call_py, bot
 from pyrogram import Client, filters
 from Telugucoders.codersdesign.thumbnail import generate_cover
 from Telugucoders.core.clientbot.queues import QUEUE, clear_queue
-from Telugucoders.helpers.filters import other_filters
+from Telugucoders.helpers.filters import command, other_filters
 from Telugucoders.helpers.command import commandpro as command
-from Telugucoders.helpers.decorators import authorized_users_only, check_blacklist
+from Telugucoders.helpers.decorators import authorized_users_only
 from Telugucoders.core.clientbot.downloader import skip_current_song, skip_item
 from config import BOT_USERNAME, GROUP, IMG_5, NETWORK
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, Message
