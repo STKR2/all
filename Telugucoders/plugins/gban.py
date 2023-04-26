@@ -3,6 +3,8 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from Telugucoders.helpers.filters import command
+from Telugucoders.helpers.filters import command, other_filters
+from Telugucoders.helpers.command import commandpro as command
 from Telugucoders.helpers.decorators import sudo_users_only
 from Telugucoders.core.database.dbchat import get_served_chats
 from Telugucoders.core.database.dbpunish import add_gban_user, is_gbanned_user, remove_gban_user
@@ -15,7 +17,7 @@ from Telugucoders.helpers.lang import languageCB
 from config.config import BOT_NAME, SUDO_USERS, BOT_USERNAME as bn
 
 
-@Client.on_message(command(["gban", f"gban@{bn}"]) & ~filters.edited)
+@Client.on_message(command(["عام", f"gban@{bn}"]) & ~filters.edited)
 @sudo_users_only
 @language
 async def global_banned(c: Client, message: Message, _):
@@ -56,13 +58,13 @@ async def global_banned(c: Client, message: Message, _):
                 except Exception:
                     pass
             ban_text = f"""
-🚷 **ɴᴇᴡ ɢʟᴏʙᴀʟ ʙᴀɴ ᴏɴ [{BOT_NAME}](https://t.me/{bn})
+ **- تم حظر عام نهائيا من [{BOT_NAME}](https://t.me/{bn})
 
-**ᴏʀɪɢɪɴ:** {message.chat.title} [`{message.chat.id}`]
-**sᴜᴅᴏ ᴜsᴇʀ:** {from_user.mention}
-**ʙᴀɴɴᴇᴅ ᴜsᴇʀ:** {user.mention}
-**ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ:** `{user.id}`
-**ᴄʜᴀᴛs:** `{number_of_chats}`"""
+**- الرسالة:** {message.chat.title} [`{message.chat.id}`]
+**- اسم المطور:** {from_user.mention}
+**- يوزر المحظور:** {user.mention}
+**- ايدي المستخدم:** `{user.id}`
+**- المجموعة:** `{number_of_chats}`"""
             try:
                 await m.delete()
             except Exception:
@@ -106,13 +108,13 @@ async def global_banned(c: Client, message: Message, _):
                 except Exception:
                     pass
             ban_text = f"""
-🚷 **ɴᴇᴡ ɢʟᴏʙᴀʟ ʙᴀɴ ᴏɴ [{BOT_NAME}](https://t.me/{bn})
+ **- تم حظر عام نهائي من [{BOT_NAME}](https://t.me/{bn})
 
-**ᴏʀɪɢɪɴ:** {message.chat.title} [`{message.chat.id}`]
-**sᴜᴅᴏ ᴜsᴇʀ:** {from_user_mention}
-**ʙᴀɴɴᴇᴅ ᴜsᴇʀ:** {mention}
-**ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ:** `{user_id}`
-**ᴄʜᴀᴛs:** `{number_of_chats}`"""
+**- الرسالة:** {message.chat.title} [`{message.chat.id}`]
+**- يوزر المطور:** {from_user_mention}
+**- يوزر المحظور:** {mention}
+**- الايدي:** `{user_id}`
+**- المجموعة:** `{number_of_chats}`"""
             try:
                 await m.delete()
             except Exception:
@@ -124,7 +126,7 @@ async def global_banned(c: Client, message: Message, _):
             return
 
 
-@Client.on_message(command(["ungban", f"ungban@{bn}"]) & ~filters.edited)
+@Client.on_message(command(["الغاء", f"ungban@{bn}"]) & ~other_filters & ~filters.edited)
 @sudo_users_only
 @language
 async def ungban_global(c: Client, message: Message, _):
