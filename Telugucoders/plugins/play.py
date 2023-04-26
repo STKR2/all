@@ -60,9 +60,9 @@ async def ytdl(link):
 #plus
 useer = "NaN"
 
-@Client.on_message(command(["شغل", f"play@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @language
-async def play(c: Client, m: Message, _)
+async def play(c: Client, m: Message, _):
     await m.delete()
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -144,7 +144,7 @@ async def play(c: Client, m: Message, _)
                 requested_by = m.from_user.first_name
                 duration = round(audio.duration / 60)
                 views = "Locally added"
-                thumbnail = f"https://te.legra.ph/file/5fdd8da2461c05d893189.jpg"
+                thumbnail = f"{IMG_5}"
                 image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 buttons = InlineKeyboardMarkup(
