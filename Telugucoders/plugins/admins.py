@@ -31,7 +31,6 @@ async def update_admin(client, message, _):
 
 
 @Client.on_message(command(["سكب", f"تخطي", "سكيب"]) & other_filters)
-@authorized_users_only
 @language
 async def skip(c: Client, m: Message, _):
     await m.delete()
