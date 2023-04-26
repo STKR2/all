@@ -17,7 +17,7 @@ sudo_user : "- اۅامࢪ اݪمطۅࢪين"
 user_cmds : "- اۅامࢪ اݪمشࢪفين"
 back_home : "• ࢪجۅع"
 ghelp_text : "- مساعدة بسيطة الك " 
-ghelp_btn : "- لك مو تدلل "
+ghelp_btn : "- لك مو تدلل دوس عليها"
 uptime_btn : "** Telugu Coders Music Bot Uptime:\n➠ Uptime: {}\n➠ User: {}\n➠ Started Time: {}\n➠ Powered By: @RR8R9**"
 
 #plugins - admins.py
