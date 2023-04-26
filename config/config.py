@@ -11,7 +11,7 @@ aiohttpsession = aiohttp.ClientSession()
 que = {}
 admins = {}
 
-#------------------------ Important Stuff 😌 -----------------------
+#------------------------ Important Stuff -----------------------
 
 API_ID = int(getenv("API_ID", "8934899"))
 API_HASH = getenv("API_HASH", "bf3e98d2c351e4ad06946b4897374a1e")
@@ -30,18 +30,18 @@ SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "30"))
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001847569598")) 
 
 MONGODB_URL = getenv("MONGODB_URL", "mongodb+srv://veez:mega@cluster0.heqnd.mongodb.net/veez?retryWrites=true&w=majority")
-#________________________ Updates 🍃 & Music bot name________________
+#________________________ Updates  & Music bot name________________
 NETWORK = getenv("NETWORK", "xl444")
 GROUP = getenv("GROUP", "xl444")
 BOT_NAME = getenv("BOT_NAME", "Music")
 BANNED_USERS = filters.user()
 
-#************************* Image Stuff 💕 ****************************
+#************************* Image Stuff  ****************************
 
-IMG_1 = getenv("IMG_1", "https://telegra.ph/file/d6f92c979ad96b2031cba.png")
-IMG_2 = getenv("IMG_2", "https://telegra.ph/file/6213d2673486beca02967.png")
-IMG_5 = getenv("IMG_5", "https://telegra.ph/file/d08d6474628be7571f013.png") 
-YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://te.legra.ph/file/bc5556476395a0c8e109b.jpg")
+IMG_1 = getenv("IMG_1", "https://te.legra.ph/file/ff43de16d318f461088c7.png")
+IMG_2 = getenv("IMG_2", "https://te.legra.ph/file/ff43de16d318f461088c7.png")
+IMG_5 = getenv("IMG_5", "https://te.legra.ph/file/ff43de16d318f461088c7.png") 
+YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://te.legra.ph/file/ff43de16d318f461088c7.png")
 
 aiohttpsession = aiohttp.ClientSession()
 
