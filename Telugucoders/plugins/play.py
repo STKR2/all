@@ -144,7 +144,7 @@ async def play(c: Client, m: Message, _):
                 requested_by = m.from_user.first_name
                 duration = round(audio.duration / 60)
                 views = "Locally added"
-                thumbnail = f"{IMG_5}"
+                thumbnail = f"https://te.legra.ph/file/5fdd8da2461c05d893189.jpg"
                 image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 buttons = InlineKeyboardMarkup(
