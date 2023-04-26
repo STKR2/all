@@ -16,9 +16,8 @@ from Telugucoders.helpers.lang import language
 from Telugucoders.helpers.lang import *
 from Telugucoders import app
 
-@Client.on_message(command(["/reload", f"/reload@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["تحديث", f"/reload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
-@language
 async def update_admin(client, message, _):
     user_mention = message.from_user.mention
     global admins
@@ -32,7 +31,6 @@ async def update_admin(client, message, _):
 
 @Client.on_message(command(["/skip", f"/skip@{BOT_USERNAME}", "/vskip"]) & other_filters)
 @authorized_users_only
-@language
 async def skip(c: Client, m: Message, _):
     await m.delete()
     user_id = m.from_user.id
@@ -86,10 +84,8 @@ async def skip(c: Client, m: Message, _):
 
 @Client.on_message(
     command(["/stop", f"/stop@{BOT_USERNAME}", "/end", f"/end@{BOT_USERNAME}", "/vstop"])
-    & other_filters
-)
+    & other_filters)
 @authorized_users_only
-@language
 async def stop(client, m: Message, _):
     chat_id = m.chat.id
     if chat_id in QUEUE:
@@ -104,10 +100,8 @@ async def stop(client, m: Message, _):
 
 
 @Client.on_message(
-    command(["/pause", f"/pause@{BOT_USERNAME}", "/vpause"]) & other_filters
-)
+    command(["/pause", f"/pause@{BOT_USERNAME}", "/vpause"]) & other_filters)
 @authorized_users_only
-@language
 async def pause(client, m: Message, _):
     user_mention = m.from_user.mention
     chat_id = m.chat.id
@@ -122,10 +116,8 @@ async def pause(client, m: Message, _):
 
 
 @Client.on_message(
-    command(["/resume", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters
-)
+    command(["/resume", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters)
 @authorized_users_only
-@language
 async def resume(client, m: Message, _):
     user_mention = m.from_user.mention
     chat_id = m.chat.id
