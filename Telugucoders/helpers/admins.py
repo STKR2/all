@@ -4,7 +4,7 @@ import Telugucoders.core.cache.admins
 
 
 async def get_administrators(chat: Chat) -> List[User]:
-    get = modules.cache.admins.get(chat.id)
+    get = get(chat.id)
 
     if get:
         return get
