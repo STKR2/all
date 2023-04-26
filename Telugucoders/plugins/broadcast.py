@@ -17,6 +17,8 @@ from Telugucoders.core.database.dbchat import get_served_chats, add_served_chat
 from Telugucoders.core.database.dbusers import get_served_users
 from Telugucoders.core.database.dbpunish import get_gbans_count
 from Telugucoders.core.database.dbqueue import get_active_chats
+from Telugucoders.helpers.filters import command, other_filters
+from Telugucoders.helpers.command import commandpro as command
 from Telugucoders.core.database.dblockchat import blacklisted_chats
 from config import BOT_USERNAME as uname
 from config import SUDO_USERS
@@ -98,22 +100,22 @@ async def broadcast_message(_, message):
     await m.edit(f"✈️ **Broadcasted message in {sent} chats.**")
 
 
-@Client.on_message(command(["stats", f"stats@{uname}"]) & ~filters.edited)
+@Client.on_message(command(["الاحصائيات", f"stats@{uname}"]) & ~other_filters & ~filters.edited)
 @sudo_users_only
 async def bot_statistic(c: Client, message: Message):
     name = me_bot.first_name
     chat_id = message.chat.id
     msg = await c.send_message(
-        chat_id, "❖ ᴄᴏʟʟᴇᴄᴛɪɴɢ sᴛᴀᴛs..."
+        chat_id, "- انتضر قليلاً"
     )
     served_chats = len(await get_served_chats()) 
     gbans_usertl = await get_gbans_count()
     tgm = f"""
-📊 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛɪsᴛɪᴄ ᴏғ [{name}](https://t.me/{uname})`:`
-➥ **ɢʀᴏᴜᴘs ᴄʜᴀᴛ** : `{served_chats}`
-➥ **ɢʙᴀɴɴᴇᴅ ᴜsᴇʀs** : `{gbans_usertl}`
-➥ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{pyver}`
-➥ **ᴘʏᴛɢᴄᴀʟʟs ᴠᴇʀsɪᴏɴ** : `{pytgver.__version__}`
-➥ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{pyrover}`
-➥ **ʙᴏᴛ ᴠᴇʀsɪᴏɴ** : `{ver}`"""
+- احصائيات بوت الـ [{name}](https://t.me/{uname})`:`
+ **- عدد الكروبات** : `{served_chats}`
+ **- العام** : `{gbans_usertl}`
+ **- النسخ** : `{pyver}`
+ **- نسخة السورس** : `{pytgver.__version__}`
+ **- نسخة بايروجرام** : `{pyrover}`
+ **- نسخ البوت** : `{ver}`"""
     await msg.edit(tgm, disable_web_page_preview=True)
