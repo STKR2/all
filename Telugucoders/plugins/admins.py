@@ -18,6 +18,7 @@ from Telugucoders import app
 
 @Client.on_message(command(["تحديث", f"/reload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
+@language
 async def update_admin(client, message, _):
     user_mention = message.from_user.mention
     global admins
@@ -29,8 +30,9 @@ async def update_admin(client, message, _):
     await message.reply_text(_["reload_btn"].format(user_mention)) 
 
 
-@Client.on_message(command(["/skip", f"/skip@{BOT_USERNAME}", "/vskip"]) & other_filters)
+@Client.on_message(command(["سكب", f"تخطي", "سكيب"]) & other_filters)
 @authorized_users_only
+@language
 async def skip(c: Client, m: Message, _):
     await m.delete()
     user_id = m.from_user.id
@@ -83,9 +85,10 @@ async def skip(c: Client, m: Message, _):
 
 
 @Client.on_message(
-    command(["/stop", f"/stop@{BOT_USERNAME}", "/end", f"/end@{BOT_USERNAME}", "/vstop"])
+    command(["اوكف", f"/stop@{BOT_USERNAME}", "كافي", f"طفي", "اسكت"])
     & other_filters)
 @authorized_users_only
+@language
 async def stop(client, m: Message, _):
     chat_id = m.chat.id
     if chat_id in QUEUE:
@@ -94,14 +97,15 @@ async def stop(client, m: Message, _):
             clear_queue(chat_id)
             await m.reply(_["stop_btn"])
         except Exception as e:
-            await m.reply(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
+            await m.reply(f" **ᴇʀʀᴏʀ:**\n\n`{e}`")
     else:
         await m.reply(_["ntg_stream_btn"])
 
 
 @Client.on_message(
-    command(["/pause", f"/pause@{BOT_USERNAME}", "/vpause"]) & other_filters)
+    command(["توقف", f"/pause@{BOT_USERNAME}", "/vpause"]) & other_filters)
 @authorized_users_only
+@language
 async def pause(client, m: Message, _):
     user_mention = m.from_user.mention
     chat_id = m.chat.id
@@ -110,14 +114,15 @@ async def pause(client, m: Message, _):
             await call_py.pause_stream(chat_id)
             await m.reply(_["pause_btn"].format(user_mention)) 
         except Exception as e:
-            await m.reply(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
+            await m.reply(f" **ᴇʀʀᴏʀ:**\n\n`{e}`")
     else:
         await m.reply(_["ntg_stream_btn"])
 
 
 @Client.on_message(
-    command(["/resume", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters)
+    command(["استمرار", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters)
 @authorized_users_only
+@language
 async def resume(client, m: Message, _):
     user_mention = m.from_user.mention
     chat_id = m.chat.id
@@ -126,6 +131,6 @@ async def resume(client, m: Message, _):
             await call_py.resume_stream(chat_id)
             await m.reply(_["resume_btn"].format(user_mention))
         except Exception as e:
-            await m.reply(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
+            await m.reply(f" **ᴇʀʀᴏʀ:**\n\n`{e}`")
     else:
         await m.reply(_["ntg_stream_btn"])
