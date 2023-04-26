@@ -75,7 +75,7 @@ async def alive(client: Client, message: Message, _):
            ) 
     await message.reply_text(_["alive_start"].format(user_mention),reply_markup=alive_keyboard)
 
-@Client.on_message(command(["السورس", "سورس"]) & ~filters.group & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(command(["السورس", "سورس"]) & filters.group & ~filters.edited)
 @language
 async def repo(client: Client, message: Message, _):
     source_keyboard = InlineKeyboardMarkup( [[
