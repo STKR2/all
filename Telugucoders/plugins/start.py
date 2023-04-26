@@ -4,7 +4,7 @@ import asyncio
 from time import time
 from datetime import datetime
 from Telugucoders.helpers.filters import command
-from Telugucoders.helpers.command import commandpro
+from Telugucoders.helpers.command import commandpro as command
 from pyrogram import Client, filters, __version__ as pyrover
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import GROUP, NETWORK, BOT_USERNAME, OWNER_ID, BOT_NAME, BANNED_USERS
@@ -65,7 +65,7 @@ async def start_(client: Client, message: Message, _):
     else:
         await message.reply_text("Please contact in my pm for more help :)")
          
-@Client.on_message(command("alive") & filters.group & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(command("النشاط") & other_filters & filters.group & ~filters.edited & ~BANNED_USERS)
 @language
 async def alive(client: Client, message: Message, _):    
     user_mention = message.from_user.mention
@@ -75,16 +75,16 @@ async def alive(client: Client, message: Message, _):
            ) 
     await message.reply_text(_["alive_start"].format(user_mention),reply_markup=alive_keyboard)
 
-@Client.on_message(commandpro(["/repo", "#repo"]) & filters.group & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(commandpro(["السورس", "سورس"]) & other_filters & filters.group & ~filters.edited & ~BANNED_USERS)
 @language
 async def repo(client: Client, message: Message, _):
     source_keyboard = InlineKeyboardMarkup( [[
-           InlineKeyboardButton(_["source"], url="https://github.com/STKR2/all")
+           InlineKeyboardButton(_["سورس فريدوم ."], url="https://github.com/STKR2/all")
            ]]
            ) 
     await message.reply_text(_["repo_btn"],reply_markup=source_keyboard) 
 
-@Client.on_message(command("help") & filters.private & ~filters.edited & ~BANNED_USERS) 
+@Client.on_message(command("مساعدة") & filters.private & ~other_filters & ~filters.edited & ~BANNED_USERS) 
 @language
 async def help(client: Client, message: Message, _):
     help_keyboard = InlineKeyboardMarkup( [[
@@ -99,11 +99,11 @@ async def help(client: Client, message: Message, _):
     await message.reply_text(_["help_button"],reply_markup=help_keyboard) 
 
 
-@Client.on_message(command("ghelp") & filters.group & ~filters.edited) 
+@Client.on_message(command("مساعدة") & other_filters & filters.group & ~filters.edited) 
 @language
 async def ghelp(client: Client, message: Message, _):
     ghelp_keyboard = InlineKeyboardMarkup( [[
-           InlineKeyboardButton(_["ghelp_btn"], url=f"https://t.me/{BOT_USERNAME}?start=help")
+           InlineKeyboardButton(_["ghelp_btn"], callback_data="user_commands")
            ]]
            ) 
     await message.reply_text(_["ghelp_text"],reply_markup=ghelp_keyboard) 
@@ -122,9 +122,9 @@ async def get_uptime(c: Client, message: Message, _):
     await message.reply_text(_["uptime_btn"].format(uptime,user_mention,START_TIME_ISO),reply_markup=uptime_keyboard) 
 
                  
-@Client.on_message(command("ping") & filters.group & ~filters.edited)
+@Client.on_message(command("بنك") & other_filters & filters.group & ~filters.edited)
 async def ping_pong(c: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("**ᴘɪɴɢɪɴɢ...**")
+    m_reply = await message.reply_text("**جاري حساب البنك ..**")
     delta_ping = time() - start
-    await m_reply.edit_text("💝 **ᴘᴏɴɢ!!**\n" f"💖 **{delta_ping * 1000:.3f} ms**")
+    await m_reply.edit_text(" **بنك البوت!-**\n" f" **{delta_ping * 1000:.3f} مللي ثانية**")
