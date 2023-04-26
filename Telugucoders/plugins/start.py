@@ -45,7 +45,7 @@ async def _human_time_duration(seconds):
     
    ## don't change any value in this repo if you change the value bot will crash your heroku accounts. 
 
-@Client.on_message(command("start") & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(command("start") & ~other_filters & ~filters.edited & ~BANNED_USERS)
 @language
 async def start_(client: Client, message: Message, _):
     user_mention = message.from_user.mention
@@ -75,11 +75,11 @@ async def alive(client: Client, message: Message, _):
            ) 
     await message.reply_text(_["alive_start"].format(user_mention),reply_markup=alive_keyboard)
 
-@Client.on_message(command(["السورس", "سورس"]) & other_filters & filters.group & ~filters.edited & ~BANNED_USERS)
+@Client.on_message(command(["السورس", "سورس"]) & ~other_filters & ~filters.group & ~filters.edited & ~BANNED_USERS)
 @language
 async def repo(client: Client, message: Message, _):
     source_keyboard = InlineKeyboardMarkup( [[
-           InlineKeyboardButton(_["Source"], url="https://github.com/STKR2/all")
+           InlineKeyboardButton(_["source"], url="https://github.com/STKR2/all")
            ]]
            ) 
     await message.reply_text(_["repo_btn"],reply_markup=source_keyboard) 
@@ -99,7 +99,7 @@ async def help(client: Client, message: Message, _):
     await message.reply_text(_["help_button"],reply_markup=help_keyboard) 
 
 
-@Client.on_message(command("مساعدة") & other_filters & filters.group & ~filters.edited) 
+@Client.on_message(command("مساعدة") & ~other_filters & ~filters.group & ~filters.edited) 
 @language
 async def ghelp(client: Client, message: Message, _):
     ghelp_keyboard = InlineKeyboardMarkup( [[
