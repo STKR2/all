@@ -99,7 +99,7 @@ async def help(client: Client, message: Message, _):
     await message.reply_text(_["help_button"],reply_markup=help_keyboard) 
 
 
-@Client.on_message(command("الاوامر") & ~filters.group & ~filters.edited) 
+@Client.on_message(command("الاوامر") & filters.group & ~filters.edited) 
 @language
 async def ghelp(client: Client, message: Message, _):
     ghelp_keyboard = InlineKeyboardMarkup( [[
