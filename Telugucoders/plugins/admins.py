@@ -16,7 +16,7 @@ from Telugucoders.helpers.lang import language
 from Telugucoders.helpers.lang import *
 from Telugucoders import app
 
-@Client.on_message(command(["تحديث", f"/reload@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["/reload", f"/reload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 @language
 async def update_admin(client, message, _):
@@ -30,9 +30,9 @@ async def update_admin(client, message, _):
     await message.reply_text(_["reload_btn"].format(user_mention)) 
 
 
-@Client.on_message(command(["تخطي", f"سكب", "سكيب"]) & other_filters)
+@Client.on_message(command(["/skip", f"/skip@{BOT_USERNAME}", "/vskip"]) & other_filters)
 @authorized_users_only
-@language 
+@language
 async def skip(c: Client, m: Message, _):
     await m.delete()
     user_id = m.from_user.id
@@ -85,8 +85,9 @@ async def skip(c: Client, m: Message, _):
 
 
 @Client.on_message(
-    command(["اوكف", f"كافي", "ايقاف", f"اسكت", "اصمت"])
-    & other_filters)
+    command(["/stop", f"/stop@{BOT_USERNAME}", "/end", f"/end@{BOT_USERNAME}", "/vstop"])
+    & other_filters
+)
 @authorized_users_only
 @language
 async def stop(client, m: Message, _):
@@ -103,7 +104,8 @@ async def stop(client, m: Message, _):
 
 
 @Client.on_message(
-    command(["مؤقت", f"/pause@{BOT_USERNAME}", "/vpause"]) & other_filters)
+    command(["/pause", f"/pause@{BOT_USERNAME}", "/vpause"]) & other_filters
+)
 @authorized_users_only
 @language
 async def pause(client, m: Message, _):
@@ -120,7 +122,8 @@ async def pause(client, m: Message, _):
 
 
 @Client.on_message(
-    command(["استمرار", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters)
+    command(["/resume", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters
+)
 @authorized_users_only
 @language
 async def resume(client, m: Message, _):
