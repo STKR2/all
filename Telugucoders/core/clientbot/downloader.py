@@ -17,7 +17,7 @@ from pytgcalls.types.stream import StreamAudioEnded
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="🗑 ʙɪɴ", callback_data="set_close"),
+            InlineKeyboardButton(text="- اެمِسِحِ", callback_data="set_close"),
         ]
     ]
 )
@@ -119,7 +119,7 @@ async def stream_end_handler(_, u: Update):
         else:
             await bot.send_message(
                 chat_id,
-                f"💡 **sᴛʀᴇᴀᴍɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ**\n\n🗂 **ɴᴀᴍᴇ:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **ᴄʜᴀᴛ:** `{chat_id}`",
+                f" ** - تم تخطي الأغنية تلقائيا**\n\n **- الاسم:** [{op[0]}]({op[1]}) | `{op[2]}`\n **- الايدي:** `{chat_id}`",
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
             )
