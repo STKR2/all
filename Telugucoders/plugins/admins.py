@@ -19,7 +19,6 @@ from Telugucoders import app
 @Client.on_message(command(["تحديث", f"/reload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 @language
-@check_blacklist()
 async def update_admin(client, message, _):
     user_mention = message.from_user.mention
     global admins
@@ -34,7 +33,6 @@ async def update_admin(client, message, _):
 @Client.on_message(command(["سكب", f"تخطي", "سكيب"]) & other_filters)
 @authorized_users_only
 @language
-@check_blacklist()
 async def skip(c: Client, m: Message, _):
     await m.delete()
     user_id = m.from_user.id
@@ -86,13 +84,10 @@ async def skip(c: Client, m: Message, _):
             await m.reply(OP)
 
 
-@Client.on_message(
-    command(["اوكف", f"/stop@{BOT_USERNAME}", "كافي", f"طفي", "اسكت"])
-    & other_filters)
+@Client.on_message(command(["كافي", f"ايقاف"]) & other_filters)
 @authorized_users_only
 @language
-@check_blacklist()
-async def stop(client, m: Message, _):
+async def stop(c: Client, m: Message, _):
     chat_id = m.chat.id
     if chat_id in QUEUE:
         try:
@@ -126,7 +121,6 @@ async def pause(client, m: Message, _):
     command(["استمرار", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters)
 @authorized_users_only
 @language
-@check_blacklist()
 async def resume(client, m: Message, _):
     user_mention = m.from_user.mention
     chat_id = m.chat.id
