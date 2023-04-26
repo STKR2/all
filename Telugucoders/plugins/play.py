@@ -8,6 +8,7 @@ from pytgcalls.types.input_stream import AudioPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio
 from Telugucoders.codersdesign.thumbnail import generate_cover
 from Telugucoders.helpers.filters import command, other_filters
+from Telugucoders.helpers.command import commandpro as command
 from Telugucoders.core.clientbot.queues import QUEUE, add_to_queue
 from Telugucoders.core.clientbot import call_py, user
 from Telugucoders.core.clientbot.downloader import bash
@@ -60,7 +61,7 @@ async def ytdl(link):
 #plus
 useer = "NaN"
 
-@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["شغل", f"تشغيل"]) & other_filters)
 @language
 async def play(c: Client, m: Message, _):
     await m.delete()
