@@ -3,6 +3,7 @@ import speedtest
 from pyrogram import filters
 from Telugucoders import app
 from config import SUDO_USERS
+from Telugucoders.helpers.command import commandpro as command
 from Telugucoders.helpers.filters import command, other_filters
 from config import BOT_USERNAME as bname
 from Telugucoders.helpers.decorators import sudo_users_only
@@ -23,7 +24,7 @@ def testspeed(m):
     return result
 
 
-@app.on_message(command(["السرعة", f"speedtest@{bname}"]) & ~other_filters & ~filters.edited)
+@app.on_message(command(["السرعة", f"سبيد"]) & ~other_filters & ~filters.edited)
 async def speedtest_function(client, message):
     m = await message.reply_text("- تجربة الملفات")
     loop = asyncio.get_event_loop()
