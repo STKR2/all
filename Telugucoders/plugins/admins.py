@@ -7,7 +7,7 @@ from Telugucoders.codersdesign.thumbnail import generate_cover
 from Telugucoders.core.clientbot.queues import QUEUE, clear_queue
 from Telugucoders.helpers.filters import other_filters
 from Telugucoders.helpers.command import commandpro as command
-from Telugucoders.helpers.decorators import authorized_users_only
+from Telugucoders.helpers.decorators import authorized_users_only, check_blacklist
 from Telugucoders.core.clientbot.downloader import skip_current_song, skip_item
 from config import BOT_USERNAME, GROUP, IMG_5, NETWORK
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -19,6 +19,7 @@ from Telugucoders import app
 @Client.on_message(command(["تحديث", f"/reload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 @language
+@check_blacklist()
 async def update_admin(client, message, _):
     user_mention = message.from_user.mention
     global admins
@@ -33,6 +34,7 @@ async def update_admin(client, message, _):
 @Client.on_message(command(["سكب", f"تخطي", "سكيب"]) & other_filters)
 @authorized_users_only
 @language
+@check_blacklist()
 async def skip(c: Client, m: Message, _):
     await m.delete()
     user_id = m.from_user.id
@@ -89,6 +91,7 @@ async def skip(c: Client, m: Message, _):
     & other_filters)
 @authorized_users_only
 @language
+@check_blacklist()
 async def stop(client, m: Message, _):
     chat_id = m.chat.id
     if chat_id in QUEUE:
@@ -123,6 +126,7 @@ async def pause(client, m: Message, _):
     command(["استمرار", f"/resume@{BOT_USERNAME}", "/vresume"]) & other_filters)
 @authorized_users_only
 @language
+@check_blacklist()
 async def resume(client, m: Message, _):
     user_mention = m.from_user.mention
     chat_id = m.chat.id
