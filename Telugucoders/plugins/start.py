@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message, _):
            ],[
            InlineKeyboardButton(_["support_btn"], url=f"https://t.me/{GROUP}"),  
            ],[
-           InlineKeyboardButton(_["owner_btn"], user_id=OWNER), 
+           InlineKeyboardButton(_["owner_btn"], url=f"tg://settings"),  
 
            ]]
            )
