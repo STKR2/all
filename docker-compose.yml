@@ -15,3 +15,7 @@ services:
        NETWORK: $NETWORK
        GROUP: $GROUP
        BOT_NAME: $BOT_NAME
+       IMG_1: $IMG_1 
+       IMG_2: $IMG_2 
+       IMG_5: $IMG_5
+       YOUTUBE_IMG_URL: $YOUTUBE_IMG_URL
