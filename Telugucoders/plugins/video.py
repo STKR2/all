@@ -220,7 +220,7 @@ async def vplay(c: Client, m: Message, _):
             if len(m.command) < 2:
                 await m.reply(_["music_13"])
             else:
-                loser = await c.send_message(chat_id, "- جاري البحث")
+                loser = await c.send_message(chat_id, "- جاري البحث ..")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 Q = 720
@@ -292,7 +292,7 @@ async def vplay(c: Client, m: Message, _):
         if len(m.command) < 2:
             await m.reply(_["music_13"]) 
         else:
-            loser = await c.send_message(chat_id, "🔍")
+            loser = await c.send_message(chat_id, "- جاري البحث ..")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
