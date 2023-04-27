@@ -189,7 +189,7 @@ async def play(c: Client, m: Message, _):
             ] 
         )
                     await m.reply_photo(
-                        photo="{IMG_5}",
+                        photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                         reply_markup=buttons,
                         caption=_["music_12"],
                     )
@@ -234,7 +234,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                             await m.reply_photo(
-                                photo="{IMG_5}",
+                                photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                                 reply_markup=buttons,
                                 caption=_["music_16"].format(pos))
                         else:
@@ -258,7 +258,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                                 await m.reply_photo(
-                                    photo="{IMG_5}",
+                                    photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                                     reply_markup=buttons,
                                     caption=_["music_12"].format(requested_by))
                             except Exception as ep:
@@ -300,7 +300,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                         await m.reply_photo(
-                            photo="{IMG_5}",
+                            photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                             reply_markup=buttons,
                             caption=_["music_10"].format(pos))
                     else:
@@ -324,7 +324,7 @@ async def play(c: Client, m: Message, _):
             ]
         )
                             await m.reply_photo(
-                                photo="{IMG_5}",
+                                photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
                                 reply_markup=buttons,
                                 caption=_["music_12"].format(m.chat.title, m.chat.id, requested_by))
                         except Exception as ep:
