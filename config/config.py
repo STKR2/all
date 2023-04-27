@@ -15,9 +15,9 @@ admins = {}
 
 API_ID = int(getenv("API_ID", "8934899"))
 API_HASH = getenv("API_HASH", "bf3e98d2c351e4ad06946b4897374a1e")
-BOT_TOKEN = getenv("BOT_TOKEN", "")
+BOT_TOKEN = getenv("BOT_TOKEN", "5528046453:AAFlnYqUFD2-")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "600"))
-STRING_SESSION = getenv("STRING_SESSION", "")
+STRING_SESSION = getenv("STRING_SESSION", "5528046453:AAFlnYqUFD2-")
 BOT_USERNAME = getenv("BOT_USERNAME", "LROBOT")
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1854384004").split()))
