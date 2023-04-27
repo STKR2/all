@@ -38,9 +38,9 @@ BANNED_USERS = filters.user()
 
 #************************* Image Stuff  ****************************
 
-IMG_1 = getenv("IMG_1", "https://te.legra.ph/file/5fdd8da2461c05d893189.png")
-IMG_2 = getenv("IMG_2", "https://te.legra.ph/file/5fdd8da2461c05d893189.png")
-IMG_5 = getenv("IMG_5", "https://te.legra.ph/file/5fdd8da2461c05d893189.png") 
+IMG_1 = getenv("IMG_1", "https://te.legra.ph/file/5fdd8da2461c05d893189.jpg")
+IMG_2 = getenv("IMG_2", "https://te.legra.ph/file/5fdd8da2461c05d893189.jpg")
+IMG_5 = getenv("IMG_5", "https://te.legra.ph/file/5fdd8da2461c05d893189.jpg") 
 YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://te.legra.ph/file/5fdd8da2461c05d893189.png")
 
 aiohttpsession = aiohttp.ClientSession()
