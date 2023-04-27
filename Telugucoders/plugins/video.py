@@ -68,7 +68,7 @@ async def ytdl(link):
 #plus
 useer = "NaN"
 
-@Client.on_message(command("vplay") & filters.group & ~filters.edited)
+@Client.on_message(command("فيديو") & filters.group & ~filters.edited)
 @language
 async def vplay(c: Client, m: Message, _):
     await m.delete()
@@ -220,7 +220,7 @@ async def vplay(c: Client, m: Message, _):
             if len(m.command) < 2:
                 await m.reply(_["music_13"])
             else:
-                loser = await c.send_message(chat_id, "🔍")
+                loser = await c.send_message(chat_id, "- جاري البحث")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 Q = 720
@@ -360,7 +360,7 @@ async def vplay(c: Client, m: Message, _):
                             await loser.delete()
                             await m.reply_text(f"🚫 ᴇʀʀᴏʀ: `{ep}`")
 
-@Client.on_message(command(["vstream", f"vstream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["بث", f"vstream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @language
 async def vstream(c: Client, m: Message, _):
     await m.delete()
