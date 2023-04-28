@@ -79,7 +79,7 @@ async def alive(client: Client, message: Message, _):
 @language
 async def repo(client: Client, message: Message, _):
     source_keyboard = InlineKeyboardMarkup( [[
-           InlineKeyboardButton(_["source"], url="https://github.com/STKR2/all")
+           InlineKeyboardButton(_["source"], url="https://t.me/Xl444")
            ]]
            ) 
     await message.reply_text(_["repo_btn"],reply_markup=source_keyboard) 
