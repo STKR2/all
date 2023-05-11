@@ -13,16 +13,16 @@ admins = {}
 
 #------------------------ Important Stuff 🤎 -----------------------
 
-API_ID = int(getenv("API_ID", "8934899"))
-API_HASH = getenv("API_HASH", "bf3e98d2c351e4ad06946b4897374a1e")
-BOT_TOKEN = getenv("BOT_TOKEN", "5204315005:AAGUB2q0QafBUwjDPGRAOcruwhUdqyXVlz4")
+API_ID = int(getenv("API_ID", "25711100"))
+API_HASH = getenv("API_HASH", "0118cc1662da972d0206420a7886769a")
+BOT_TOKEN = getenv("BOT_TOKEN", "6034374468:AAEnB8MuEres4zWPFWWrB898n3YNGN-lqq0")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "600"))
-STRING_SESSION = getenv("STRING_SESSION", "AgAZiHdAd4EOX2_TFaotq0BvHmvyfNnuzW1BXj_K4vIjrDbv_c2Ii7HvAyDU-kjCHAQsEvvY-AsNtiGCQ000WasBQ6qvB4wV5Ez7XZQyNmqbe2Cyg0DUTLHGFqKx-cuZ6RuYIla3TFYNx02fRE1TK_cYmdZr2KC4PvH80JM_zSzCju99osQ8xTQGI7L4wsZmOGD7ACCZpbGt_3WM-nalZCq4gS37ubEmu1pCLc7GE5NVkyUYyG1fERP8LRisXehFuf5Ly-ZOZ8e98sr0tYBRKfLsTODFsGVWRVIYvyZ4KstWO9O54MAm5eKkasktNoBSv49KSMPiBrtmbiNFKBXTi8loAAAAAVYfLGoA")
-BOT_USERNAME = getenv("BOT_USERNAME", "LROBOT")
+STRING_SESSION = getenv("STRING_SESSION", "BACDtgfAbRPySB7Ab1IEp9SZsAHR6op-_vB_72_X3ZMEKZHQnY5WJk-sj86O9rT9cyBXY_WwyUaclQ0OI3vaW-l_TguqQ7GA0N7YkYbTB1OUgDu3fcUNS9VDG2Aa8knARAhhuZBZ6kdaXCHxQzBvNhML4HTfMAxo2yxbJlqiMLUYTa93n_6h-5fp-QsZ-ZFnWZ2mvd6Xuj9-K5btKA09AjrbU1gy3eqZM5qohrOyb-cK3-aQwi-2NKvuzl5-Rc83oypKdclAPPs4WbLlW0r4icauhi9IyS70oFCpepA3mU6uJkmBusQ5xQfqprYEPbIXrSvy95gK-sjA2-yFVNLwAo67ULf5dwA")
+BOT_USERNAME = getenv("BOT_USERNAME", "B78_Bot")
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1854384004").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1354234231").split()))
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "1854384004").split())
+    map(int, getenv("OWNER_ID", "1354234231").split())
 )  # Input type must be interger
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "30"))
 
@@ -31,8 +31,8 @@ LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001847569598"))
 
 MONGODB_URL = getenv("MONGODB_URL", "mongodb+srv://veez:mega@cluster0.heqnd.mongodb.net/veez?retryWrites=true&w=majority")
 #________________________ Updates  & Music bot name________________
-NETWORK = getenv("NETWORK", "xl444")
-GROUP = getenv("GROUP", "xl444")
+NETWORK = getenv("NETWORK", "DAD_MIDO")
+GROUP = getenv("GROUP", "DAD_MIDO")
 BOT_NAME = getenv("BOT_NAME", "Music")
 BANNED_USERS = filters.user()
 
